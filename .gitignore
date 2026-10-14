@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+regd.json
+regd-journal.jsonl
+.venv/
+TASK.md
