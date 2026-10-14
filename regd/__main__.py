@@ -18,7 +18,7 @@ import sys
 from . import __version__
 from .model import DEFAULT_LEASE, human_delta, iso
 from .registry import Registry, build_server
-from .render import archive_lines, rows_lines, tool_lines
+from .render import archive_lines, rows_lines
 
 
 def default_store() -> str:

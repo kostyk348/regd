@@ -5,7 +5,7 @@ import unittest
 
 from regd import handshake as hs
 from regd.model import CHALLENGE_HEADER, HANDSHAKE_PATH
-from tests.helpers import Clock, ToolCase
+from tests.helpers import ToolCase
 
 
 class HandshakeTest(ToolCase):

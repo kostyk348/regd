@@ -228,6 +228,3 @@ class Store:
 
     def expired_rows(self) -> list[dict]:
         return [dict(entry) for entry in self.expired]
-
-    def journal_tail(self, limit: int = 50) -> list[dict]:
-        return self.journal[-limit:]

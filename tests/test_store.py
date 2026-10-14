@@ -5,7 +5,7 @@ import json
 import os
 import unittest
 
-from regd.model import (DEGRADE_AFTER_PROBES, DEFAULT_LEASE, FRESHNESS_HALF_LIFE,
+from regd.model import (DEGRADE_AFTER_PROBES, FRESHNESS_HALF_LIFE,
                         freshness, refresh_flags, reputation, success_ratio,
                         tool_id, verb_matches, view)
 from tests.helpers import TempDirCase
