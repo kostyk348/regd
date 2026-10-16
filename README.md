@@ -1,5 +1,9 @@
 # regd — реестр агентных инструментов с доверием и сроком годности
 
+[![CI](https://github.com/kostyk348/regd/actions/workflows/tests.yml/badge.svg)](https://github.com/kostyk348/regd/actions/workflows/tests.yml)
+[![Release](https://img.shields.io/github/v/release/kostyk348/regd?sort=semver&color=blue)](https://github.com/kostyk348/regd/releases)
+[![Last commit](https://img.shields.io/github/last-commit/kostyk348/regd?branch=master)](https://github.com/kostyk348/regd/commits/master)
+
 `regd` — реестр, в который инструмент попадает **только после рукопожатия**, живёт **на аренде**,
 которая истекает, и уходит из выдачи в **архив `expired`** с причиной и датой, а не исчезает молча.
 Вызывающий оставляет исход вызова, из исходов считается **репутация числом**. Одна и та же логика
@@ -51,9 +55,11 @@ $ python3 -m regd demo          # сценарий до/после `gc` одно
 
 ```bash
 # 1. инструмент на loopback, который умеет pdf.summarize и pdf.extract
+
 python3 -m regd.tools --name pdf-summarizer --verb pdf.summarize --verb pdf.extract --port 8080
 
 # 2. регистрация: реестр дёргает endpoint с challenge, инструмент обязан его вернуть
+
 python3 -m regd register --name pdf-summarizer --endpoint http://127.0.0.1:8080 \
     --verb pdf.summarize --verb pdf.extract --owner алиса --lease 3600
 ```
@@ -77,6 +83,7 @@ $ echo $?
 
 ```bash
 # 3. поиск исполнителя по возможности
+
 python3 -m regd find --verb pdf.summarize
 ```
 
@@ -91,6 +98,7 @@ python3 -m regd find --verb pdf.summarize
 
 ```bash
 # 4. исходы вызовов, состояние, продление аренды, сборка мусора
+
 python3 -m regd report --id 7ce23cb505ced6f4 --ok
 python3 -m regd report --id 7ce23cb505ced6f4 --fail --note таймаут
 python3 -m regd list
@@ -105,6 +113,7 @@ python3 -m regd gc
 
 ```bash
 # 5. доказательство целиком: два инструмента, продление, смерть, gc — до и после
+
 python3 -m regd demo
 ```
 
