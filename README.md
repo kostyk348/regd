@@ -1,8 +1,17 @@
+<div align="center">
+
+<img src="docs/banner.svg" alt="regd banner" width="1000">
+
 # regd — реестр агентных инструментов с доверием и сроком годности
 
 [![CI](https://github.com/kostyk348/regd/actions/workflows/tests.yml/badge.svg)](https://github.com/kostyk348/regd/actions/workflows/tests.yml)
 [![Release](https://img.shields.io/github/v/release/kostyk348/regd?sort=semver&color=blue)](https://github.com/kostyk348/regd/releases)
 [![Last commit](https://img.shields.io/github/last-commit/kostyk348/regd?branch=master)](https://github.com/kostyk348/regd/commits/master)
+
+</div>
+
+---
+
 
 `regd` — реестр, в который инструмент попадает **только после рукопожатия**, живёт **на аренде**,
 которая истекает, и уходит из выдачи в **архив `expired`** с причиной и датой, а не исчезает молча.
